@@ -4,13 +4,16 @@ const ConsultorioSchema = new Schema({
         type:Date,        
         required:true
     },
-    password: String,
-    date: {
-        type: Date,
-        default:new Date()
+    responsable: String,
+    casosRegistrados: {
+        type: ObjectId,
+        required:false
+
     },
     name: String
     
+}, {
+    timestamps:true
 })
 
-module.exports = model('User',userSchema);
+module.exports = model('Consultorio',ConsultorioSchema);
