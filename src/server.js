@@ -1,5 +1,7 @@
 const express = require('express');
+const { json } = require('express');
 const path = require('path');
+
 
 //Initializations
 const app = express();
@@ -8,17 +10,18 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname,'views'));
 
+
 //Middlewares
-app.use(express.urlencoded({extended:false}));
+
+app.use(json());
 
 //Global Variables
 
 
 
 //Routes
-app.get('/',(req,res)=>{
-    res.send('hello World!!');
-});
+app.use(require('./routes/index.routes'));
+app.use(require('./routes/consultorios.routes'));
 
 
 //static files

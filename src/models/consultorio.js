@@ -4,11 +4,11 @@ const ConsultorioSchema = new Schema({
         type:Date,        
         required:true
     },
+    horaInicio:String,
+    horaFin:String,
     responsable: String,
     casosRegistrados: {
-        type: ObjectId,
-        required:false
-
+        type:Object
     },
     name: String
     
