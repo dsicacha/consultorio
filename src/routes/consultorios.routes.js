@@ -12,7 +12,6 @@ const {
 //Crear consultorio
 router.post('/consultorio/crear',crearConsultorio);
 
-
 //Listar todos los consultorios
 router.get('/consultorios/',listarConsultorios);
 
@@ -20,11 +19,6 @@ router.get('/consultorios/',listarConsultorios);
 router.put('/consultorio/editar/:id',editarConsultorio);
 
 //Eliminar consultorio
-
 router.delete('/consultorio/eliminar/:id',eliminarConsultorio);
-
-
-
-
 
 module.exports = router;

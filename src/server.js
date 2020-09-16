@@ -1,6 +1,10 @@
 const express = require('express');
 const { json } = require('express');
 const path = require('path');
+const morgan = require('morgan');
+
+
+
 
 
 //Initializations
@@ -12,12 +16,12 @@ app.set('views',path.join(__dirname,'views'));
 
 
 //Middlewares
-
 app.use(json());
+app.use(morgan('dev'));
+
+
 
 //Global Variables
-
-
 
 //Routes
 app.use(require('./routes/index.routes'));
