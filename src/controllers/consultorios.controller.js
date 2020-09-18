@@ -5,8 +5,7 @@ const consultorioBD = require('../models/consultorio');
 consultorioCtrl.crearConsultorio =async (req,res) =>{
     const {fecha, horaInicio, horaFin, responsable} = req.body;
     const newConsultorio = new consultorioBD({fecha, horaInicio, horaFin, responsable});    
-    await newConsultorio.save();    
-    res.send('Se creo un nuevo consultorio');
+    await newConsultorio.save();       
 };
 
 //listar consultorios

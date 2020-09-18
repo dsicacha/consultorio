@@ -4,9 +4,6 @@ const path = require('path');
 const morgan = require('morgan');
 
 
-
-
-
 //Initializations
 const app = express();
 
